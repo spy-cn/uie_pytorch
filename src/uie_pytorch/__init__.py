@@ -1,4 +1,4 @@
-"""UIE-PyTorch: A faithful PyTorch port of PaddleNLP's UIE model.
+﻿"""UIE-PyTorch: A faithful PyTorch port of PaddleNLP's UIE model.
 
 Zero-shot / few-shot universal information extraction without PaddlePaddle.
 
@@ -16,5 +16,22 @@ from .extractor import UIEExtractor
 from .utils import SchemaTree, build_schema_tree
 from .converter import convert_model
 
-__all__ = ["UIE", "UIEExtractor", "SchemaTree", "build_schema_tree", "convert_model"]
-__version__ = "1.0.0"
+# Fine-tuning utilities (optional — import lazily if heavy deps missing)
+try:
+    from .dataset import UIEDataset, UIEExample
+    from .trainer import train_uie, uie_loss
+except ImportError:  # pragma: no cover
+    pass
+
+__all__ = [
+    "UIE",
+    "UIEExtractor",
+    "SchemaTree",
+    "build_schema_tree",
+    "convert_model",
+    "UIEDataset",
+    "UIEExample",
+    "train_uie",
+    "uie_loss",
+]
+__version__ = "1.1.0"
