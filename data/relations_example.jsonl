@@ -1,2 +1,2 @@
-﻿{"text": "王某某是某公司的法定代表人，该公司成立于2015年。", "relations": [{"subject": {"label": "人物", "start": 0, "end": 3}, "predicate": "职务", "object": {"start": 4, "end": 9}}], "schema": ["人物", "职务"]}
+{"text": "王某某是某公司的法定代表人，该公司成立于2015年。", "relations": [{"subject": {"label": "人物", "start": 0, "end": 3}, "predicate": "职务", "object": {"start": 4, "end": 9}}], "schema": ["人物", "职务"]}
 {"text": "《三体》是刘慈欣创作的科幻小说，首次出版于2008年。", "relations": [{"subject": {"label": "作品", "start": 1, "end": 3}, "predicate": "作者", "object": {"start": 4, "end": 7}}], "schema": ["作品", "作者"]}

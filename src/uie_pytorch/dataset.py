@@ -1,4 +1,4 @@
-﻿"""用于微调 UIE 模型的 Dataset 数据处理工具。
+"""用于微调 UIE 模型的 Dataset 数据处理工具。
 
 UIE (Universal Information Extraction) 将所有的信息抽取任务统一转化为【区间/片段抽取 (Span Extraction)】：
     输入序列  = [CLS] <Schema 提示词 (Prompt)> [SEP] <待抽取的文本 (Text)> [SEP]
@@ -158,7 +158,7 @@ class UIEDataset(Dataset):
         self.instances: List[Dict[str, Any]] = []
 
         # 一次性加载所有原始标注 JSON Lines 数据
-        with open(data_path, "r", encoding="utf-8") as f:
+        with open(data_path, "r", encoding="utf-8-sig") as f:
             records = [json.loads(line) for line in f if line.strip()]
 
         positives: List[Dict[str, Any]] = []  # 存储正样本（即在该文本中能成功抽取出目标实体的样例）
